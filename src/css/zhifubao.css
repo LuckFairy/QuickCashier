@@ -1,0 +1,33 @@
+
+.zhifubao h1{
+	margin:32px 0 28px 38px;
+	color:#565656;
+	
+} 
+.zhifubao h1 span{
+	color:#56B5FF;
+}
+.zhifubao .f-fl dl.first{
+	margin-left: 212px;
+	width:268px;
+	text-align: center;
+}
+.zhifubao .erwei{
+	width: 242px;
+	height: auto;
+	border:1px solid #D6D6D6;
+	padding:12px;
+}
+.zhifubao .f-fl dl.first dd{
+	height: 76px;
+	background:url(../imgs/pay_bg_red.png) no-repeat left top/100% 100%;
+	color:#fff;
+	
+}
+.zhifubao .f-fl dl.first dd img{
+	margin-right: 18px;
+	}
+.zhifubao .f-fl dl.first dd p{
+	display: inline-block;
+	line-height: 1.2;
+}

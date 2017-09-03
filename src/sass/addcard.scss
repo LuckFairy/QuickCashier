@@ -1,0 +1,40 @@
+@import "global.scss";
+
+.select-card{
+    margin-left: 0;
+    background-image: none;
+    height: 40px;
+    padding-top: 16px;
+    cursor: pointer;
+}
+.addCard{
+    border-top: 1px solid $border_color;
+    padding-top: 18px;
+    margin-bottom: -58px;
+}
+.checkbox{
+    display: inline-block;
+    width:20px;
+    height: 20px;
+    background: url(../imgs/icon_nomal.png) no-repeat center/100%;
+    vertical-align: middle;
+    margin:0 32px 0 18px;
+}
+.on_check {
+    border:1px solid #b1c3e0;
+    height: 38px;
+    .checkbox{
+        background-image: url(../imgs/icon_selected.png);
+    }
+}
+.add-btn{
+    display: inline-block;
+    @include borderStyle();
+    height: 34px;
+    width: 110px;
+    line-height: 34px;
+    color:$color_blue;
+    font-size: 12px;
+    background:none;
+    cursor: pointer;
+}

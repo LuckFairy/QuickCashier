@@ -1,0 +1,115 @@
+@import "global.scss";
+
+.sublist .card-select{
+    margin-top: 52px;
+    h1 {
+        font-size: 22px;
+        color: #222222;
+        padding-bottom: 12px;
+        background: url(../imgs/title_line_blue.png) no-repeat left bottom/100% auto;
+        img{
+            margin-right: 12px;
+        }
+    }
+    .tabbtn{
+        position: relative;
+        border: none;
+        &>li{
+            margin-top: 6px;
+        }
+    }
+    .tabbtn>li a{
+        font-size: 16px;
+        color: #969696;
+        width: 80px;
+        &.active{
+            color: #FF514E;
+        }
+    }
+    .tabcon{
+        border:1px solid #D6D6D6;
+//      position: absolute;
+        overflow: visible;
+        width: 93.33%;
+        margin-top:10px;
+        margin-bottom: 40px;
+        .circle{
+            position: absolute;
+            display: inline-block;
+            top: -8px;
+            left: 40px;
+            width: 14px;
+            height: 8px;
+            background: url(../imgs/circle.png) no-repeat center/cover;
+            background-color: #fff;
+        }
+        .tabList{
+            ul{
+                    overflow: hidden;
+                width: 100%;
+            }
+            ul>li{
+                text-align: center;
+                padding:0 1.6%;
+//              overflow: hidden;
+                margin-top: 32px;
+                &:last-child{
+                   margin-bottom: 32px;
+                }
+            }
+            ul>li a{
+                float: left;
+                width: 21.78%;
+//              width:244px;
+                height: 58px;
+                line-height: 58px;
+                border:1px solid #D6D6D6;
+                margin-right: 3.5%;
+                position: relative;
+                &:last-child{
+                    margin-right: 0;
+                    float: right;
+                   
+                }
+                 .dotbar{
+                    position: absolute;
+//                  display: none;
+                    font-size: 12px;
+                    color:#fff;
+                    height: 20px;
+                    width: 101%;
+                    line-height: 20px;
+                    left:-1px;
+                    bottom: -20px;
+                    z-index: 33;
+                    background: #FF514E;
+                }
+                .on_select{
+                   position: absolute;
+                   bottom:0;
+                   width: 100%;
+                   height: 100%;
+                   background: url(../imgs/bank_selected.png) no-repeat right bottom;
+                   z-index: 35;
+                   display: none;
+                }
+                &:hover {
+                    border:1px solid #FF514E;
+                }
+                &.selected{
+                    border:1px solid #FF514E;
+                    .on_select{
+                        display: block;
+                    }
+                }
+                &#loadMore{
+                    float: left;
+                    color:#333333;
+                    img{
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

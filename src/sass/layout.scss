@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/**
+ * layout.scss
+ * @authors Ou Yuan (beyondouyuan.github.io)
+ * @date    2017-01-06 14:49:40
+ * @version $1.0$
+ */
+
+@import "global.scss";
+body {
+    position: relative;
+    width: $v100;
+    height: $v100;
+    background: $color_bd url(../images/img_bg.png) center center no-repeat;
+    background-size: cover;
+}
+
+.container-full-ui {
+    width: $v100;
+    height: $v100;
+    @include positionStyle;
+    & .grid-row {
+        width: $v100;
+        height: $v100;
+        // @include positionStyle;
+        & .grid-sg-col-12 {
+            width: $v100;
+        }
+        & .grid-sg-col-7,
+        & .grid-sm-col-7,
+        & .grid-ss-col-7 {
+            width: $wv-lg;
+            @include marginCenterStyle;
+            width: $wv-lg;
+            // 大于1680px的屏幕，内容区设置最大为1200px
+            @media screen and (min-width: $min-width-lg) {
+                width: $wv-lg;
+            }
+            // 小于1440px的屏幕，最大为内容区设置为960px
+            @media screen and (max-width: $max-width-md) {
+                width: $wv-md;
+            }
+            @media screen and (max-width: $max-width-xm) {
+                width: $wv-xm;
+            }
+            @media screen and (max-width: $max-width-sm) {
+                width: $wv-sm;
+            }
+        }
+        & .container-ui {
+            // @include positionStyle;
+            box-sizing: border-box;
+        }
+    }
+}

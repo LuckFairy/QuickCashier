@@ -1,0 +1,7 @@
+#git ignore
+dist
+doc
+lib
+node_modules
+html
+.rar

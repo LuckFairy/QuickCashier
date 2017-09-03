@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+		<title>收银台</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/quick_select.css" />
+		<link rel="stylesheet" href="css/cunxu.css" />
+		<link rel="stylesheet" href="css/quick_save.css" />
+		<link rel="stylesheet" type="text/css" href="css/layer.css"/>
+	</head>
+
+	<body>
+		<header>
+			<div class="top wrap">
+				<div class="f-fl top-left">
+					<a href="index.html" class="logo"><img src="imgs/logo_red.png" /></a>
+					<span>收银台</span>
+				</div>
+				<ul class="f-fr top-right">
+					<li style="display: none;">
+						<a href="#">登录</a>
+						<a href="#">注册</a>
+					</li>
+					<li>
+						账户：
+						<a href="javascrip:;">216431673454</a>
+						<!--<a href="#" style="margin-left: 2px;padding-right: 10px;">[退出]</a>-->
+					</li>
+					<li>
+						<a href="tel:4000966263" style="padding:0 10px; border:1px solid #565656;border-top: none;border-bottom: none;"><i class="icon"><img src="imgs/index_phone.png"/></i>400-096-6263</a>
+
+					</li>
+					<li>
+						<a href="#" style="padding-left: 10px;">帮助中心</a>
+					</li>
+
+				</ul>
+			</div>
+		</header>
+		<section>
+			<div class="contaiter f-oh">
+
+				<div class="tradeDetail wrap">
+					<ul class="f-fl tradeDetail-left">
+						<li>来自合利宝商家空间的交易</li>
+						<li>订单号：<i id="num">55494415796</i> </li>
+						<li>商品名称：<i id="name">548747541967[话费充值移动]</i></li>
+						<li class="tradeDetail-con">收款方：<i id="shoukuan">南京天环电子科技有限公司</i></li>
+						<li class="tradeDetail-con">下单时间：<i id="shijian">2017年07月12日 11:11:06</i></li>
+					</ul>
+					<ul class="f-fr tradeDetail-right">
+						<li>应付金额：<i id="cash">10.00</i>元</li>
+						<li>
+							<a href="javascript:;" id="tradeDetail-btn">订单详情 <i class="icon icon-down"></i></a>
+						</li>
+					</ul>
+
+				</div>
+				<div class="wrap nav-con">
+					<div class="nav ">
+						<ul class="tabbtn" id="tab">
+							<li>
+								<a href="javascript:;" id="cunxu">储蓄卡</a>
+							</li>
+							<li>
+								<a href="javascript:;" id="xinyong">信用卡</a>
+							</li>
+							<li class="active">
+								<a href="javascript:;" id="quick_payment">快捷支付</a>
+							</li>
+							<li>
+								<a href="javascript:;" id="weixin">微信</a>
+							</li>
+							<li>
+								<a href="javascript:;" id="zhifubao">支付宝</a>
+							</li>
+							<li>
+								<a href="javascript:;" id="zhanghao">帐号支付</a>
+							</li>
+							<li>
+								<a href="javascript:;" id="baitiao">打白条</a>
+							</li>
+						</ul>
+						<div class="tabcon" id="tabcon">
+							<div class="sublist cunxu">
+								<dl>
+									<dd class="card-select one">
+										<h1><img src="imgs/tittle_icon_personal.png"  />个人网银<span>（需要开通网银，跳转银行页面）</span></h1>
+										<div class="select-detail">
+											<img src="imgs/logo/ICBC.png" />存蓄卡（3637）
+											<span><i class="icon icon-cheapness">优惠</i>单单减最高999元</span>
+										</div>
+										<div class="tabcon">
+											<!--<div class="circle"></div>-->
+											<div id="tab1" class="tabList">
+												<ul>
+													<li class="clear">
+														<a href="#" class="selected"><img src="imgs/logo/ICBC.png" />
+															<div class="dotbar">单单减最高999元</div>
+															<div class="on_select"></div>
+														</a>
+														<a href="#"><img src="imgs/logo/ICBC.png" />
+															<div class="dotbar">单单减最高999元</div>
+															<div class="on_select"></div>
+														</a>
+														<a href="#"><img src="imgs/logo/ICBC.png" />
+															<div class="dotbar">单单减最高999元</div>
+															<div class="on_select"></div>
+														</a>
+														<a href="#"><img src="imgs/logo/ICBC.png" />
+															<div class="dotbar">单单减最高999元</div>
+															<div class="on_select"></div>
+														</a>
+													</li>
+													<li class="clear">
+														<a href="#"><img src="imgs/logo/ICBC.png" />
+															<div class="dotbar">单单减最高999元</div>
+															<div class="on_select"></div>
+														</a>
+														<a href="javascript:;" class="loadMore" id="loadMore">
+															更多银行<img src="imgs/icon_right_ash.png" />
+														</a>
+
+													</li>
+												</ul>
+											</div>
+										</div>
+									</dd>
+									<dd class="card-select two">
+										<h1><img src="imgs/tittle_icon_enterprise.png"  />企业网银<span>（需要开通网银，跳转银行页面）</span></h1>
+										<!--<ul class="tabbtn">
+											<li><a href="#tab1" class="active">储蓄卡</a><a href="#tab2">信用卡</a></li>
+										</ul>-->
+										<div class="tabcon">
+											<!--<div class="circle"></div>-->
+											<div id="tab1" class="tabList">
+												<ul>
+													<li class="clear">
+														<a href="#" class="selected"><img src="imgs/logo/ICBC.png" />
+															<div class="dotbar">单单减最高999元</div>
+															<div class="on_select"></div>
+														</a>
+														<a href="#"><img src="imgs/logo/ICBC.png" />
+															<div class="dotbar">单单减最高999元</div>
+															<div class="on_select"></div>
+														</a>
+														<a href="#"><img src="imgs/logo/ICBC.png" />
+															<div class="dotbar">单单减最高999元</div>
+															<div class="on_select"></div>
+														</a>
+														<a href="#"><img src="imgs/logo/ICBC.png" />
+															<div class="dotbar">单单减最高999元</div>
+															<div class="on_select"></div>
+														</a>
+													</li>
+													<li class="clear">
+														<a href="#"><img src="imgs/logo/ICBC.png" />
+															<div class="dotbar">单单减最高999元</div>
+															<div class="on_select"></div>
+														</a>
+														<a href="javascript:;" class="loadMore" id="loadMore">
+															更多银行<img src="imgs/icon_right_ash.png" />
+														</a>
+
+													</li>
+												</ul>
+											</div>
+										</div>
+									</dd>
+									<dd class="btn"> <button class="pay-btn" id="pay-btn">到网上银行支付</button></dd>
+								</dl>
+							</div>
+							<div class="sublist xinyong">
+								<dl>
+									<dd class="card-select one">
+										<h1><img src="imgs/tittle_icon_personal.png"  />个人网银<span>（需要开通网银，跳转银行页面）</span></h1>
+										<div class="select-detail">
+											<img src="imgs/logo/ICBC.png" />存蓄卡（3637）
+											<span><i class="icon icon-cheapness">优惠</i>单单减最高999元</span>
+										</div>
+										<div class="tabcon">
+											<!--<div class="circle"></div>-->
+											<div id="tab1" class="tabList">
+												<ul>
+													<li class="clear">
+														<a href="#" class="selected"><img src="imgs/logo/ICBC.png" />
+															<div class="dotbar">单单减最高999元</div>
+															<div class="on_select"></div>
+														</a>
+														<a href="#"><img src="imgs/logo/ICBC.png" />
+															<div class="dotbar">单单减最高999元</div>
+															<div class="on_select"></div>
+														</a>
+														<a href="#"><img src="imgs/logo/ICBC.png" />
+															<div class="dotbar">单单减最高999元</div>
+															<div class="on_select"></div>
+														</a>
+														<a href="#"><img src="imgs/logo/ICBC.png" />
+															<div class="dotbar">单单减最高999元</div>
+															<div class="on_select"></div>
+														</a>
+													</li>
+													<li class="clear">
+														<a href="#"><img src="imgs/logo/ICBC.png" />
+															<div class="dotbar">单单减最高999元</div>
+															<div class="on_select"></div>
+														</a>
+														<a href="javascript:;" class="loadMore" id="loadMore">
+															更多银行<img src="imgs/icon_right_ash.png" />
+														</a>
+
+													</li>
+												</ul>
+											</div>
+										</div>
+									</dd>
+									<dd class="btn"> <button class="pay-btn" id="pay-btn">到网上银行支付</button></dd>
+								</dl>
+							</div>
+							<div class="sublist quick_payment" style="display: block;">
+								<dl>
+									<dt>
+											<img src="imgs/quick_payment.png" class="bankcard" />
+											<span>(使用签约银行卡支付，快捷安全！)</span>
+										</dt>
+									<dd class="form">
+										<div class="bform">
+											<p>
+												<label for="bank-id">银行卡号</label>
+												<input id="bank-id" name="bankId" type="tel" maxlength="28" value="2222222" required>
+												<span class="tip" id="bankId_info"></span>
+											</p>
+											<div id="bank-name">
+												<label for="bank-name">所属银行</label>
+												<div class="storage-card">
+													<img src="imgs/logo/" alt="" />
+													<span><i class="icon card_bg">储蓄卡</i></span>
+												</div>
+												<div class="credit-card">
+													<img src="imgs/logo/ICBC.png" alt="" />
+													<span><i class="icon card_bg">信用卡</i></span>
+												</div>
+												<a href="quick_select.html" class="check-card" id="check-elsebank">选择其他银行
+													<img src="imgs/icon_right.png" style="height: 20px;" />
+												</a>
+											</div>
+											<p>
+												<label for="user">姓名</label>
+												<input id="user" type="text" name="userName" placeholder="请输入您的真实姓名" maxlength="15" required>
+												<span class="tip" id="user_info"></span>
+											</p>
+											<p>
+												<label for="card-id">身份证号</label>
+												<input id="card-id" type="text" name="cardId" placeholder="请输入您的身份证号" maxlength="18" required>
+												<span class="tip" id="cardId_info"></span>
+											</p>
+											<p class="credit-card">
+												<label for="card-date">有效期</label>
+												<!--<input id="card-date" type="tel" name="cardDate" placeholder="如：08/17 请输入0817" maxlength="4" required>-->
+												<select id="card-date-month" required>
+													<option>选择</option>
+													<option value="1">01</option>
+													<option value="2">02</option>
+													<option value="3">03</option>
+													<option value="4">04</option>
+													<option value="5">05</option>
+													<option value="6">06</option>
+													<option value="7">07</option>
+													<option value="8">08</option>
+													<option value="9">09</option>
+													<option value="10">10</option>
+													<option value="11">11</option>
+													<option value="12">12</option>
+												</select>
+												月&nbsp;/&nbsp;
+												<select id="card-date-year"  required >
+													<option value="">选择</option>
+													<option value="2017">2017</option>
+													<option value="2018">2018</option>
+													<option value="2019">2019</option>
+													<option value="2020">2020</option>
+													<option value="2021">2021</option>
+													<option value="2022">2022</option>
+													<option value="2023">2023</option>
+													<option value="2024">2024</option>
+													<option value="2025">2025</option>
+													<option value="2026">2026</option>
+													<option value="2027">2027</option>
+													<option value="2028">2028</option>
+													<option value="2029">2029</option>
+													<option value="2030">2030</option>
+												</select>&nbsp;年
+												<span class="tip" id="cardDate_info"></span>
+											</p>
+											<p class="credit-card">
+												<label for="card-cvn">cvn2</label>
+												<input id="card-cvn" type="text" name="cardcvn" placeholder="信用卡背面后三位数字" maxlength="3" required>
+												<span class="tip" id="creditCvn_info"></span>
+											</p>
+											<p>
+												<label for="tel">手机号</label>
+												<input id="tel" type="tel" name="telphone" placeholder="请输入银行预留手机号" maxlength="11" required>
+												<span class="tip" id="tel_info"></span>
+											</p>
+											<div id="selmsg">
+												<span class="sele"></span>
+												<span>我已阅读并同意</span>
+												<a href="javascript:;">《快捷支付服务协议》</a>
+												<span class="tip" id="selmsg_info"></span>
+											</div>
+											<p>
+												<button class="submit" id="payment" style="cursor: pointer;">同意协议并支付</button>
+											</p>
+										</div>
+									</dd>
+									<div class="b-del">
+										<div class="b-del-top">
+											<div class="b-del-item">
+												<h1>
+													<img src="imgs/logo/ICBC.png"/>
+													<span>储蓄卡</span>
+												</h1>
+												<div id="bank-id">&nbsp;&nbsp;4649&nbsp;4567&nbsp;694</div>
+											</div>
+
+										</div>
+										<table border="1" class="b-del-list">
+											<tr>
+												<th>单笔限额（元）</th>
+												<th>每日限额（元）</th>
+												<th>每日限额（元）</th>
+											</tr>
+											<tr>
+												<td>5万</td>
+												<td>5万</td>
+												<td>5万</td>
+											</tr>
+										</table>
+									</div>
+
+									<!--<dd><button>同意协议并支付</button></dd>-->
+								</dl>
+							</div>
+							<div class="sublist zhifubao weixin">
+								<div class="clear">
+									<div class="f-fl">
+										<h1>距离二维码过期还剩<span class="timer erwei-timer">119秒</span>，过期后请刷新页面重新获取二维码</h1>
+										<dl class="first">
+											<dt><img src="imgs/qrcode_img.jpg" class="erwei" /></dt>
+											<dd>
+												<img src="imgs/icon_scan.png" alt="" />
+												<div>
+													<p>请使用微信扫一扫</p>
+													<p>扫描二维码支付</p>
+												</div>
+											</dd>
+										</dl>
+										<dl class="last">
+											<dt>若你已扫描二维码并在手机客户端成功支付，无需重新扫码支付。</dt>
+											<dd>（有时会因网络的缘故，该页面的支付结果会延时通知）</dd>
+										</dl>
+									</div>
+									<div class="f-fr">
+										<img src="imgs/weixin.png" />
+									</div>
+								</div>
+							</div>
+							<div class="sublist zhifubao">
+								<div class="clear">
+									<div class="f-fl">
+										<h1>距离二维码过期还剩<span class="timer erwei-timer">119秒</span>，过期后请刷新页面重新获取二维码</h1>
+										<dl class="first">
+											<dt><img src="imgs/qrcode_img.jpg" class="erwei" /></dt>
+											<dd>
+												<img src="imgs/icon_scan.png" alt="" />
+												<div>
+
+													<p>请使用支付宝扫一扫</p>
+													<p>扫描二维码支付</p>
+												</div>
+											</dd>
+										</dl>
+										<dl class="last">
+											<dt>若你已扫描二维码并在手机客户端成功支付，无需重新扫码支付。</dt>
+											<dd>（有时会因网络的缘故，该页面的支付结果会延时通知）</dd>
+										</dl>
+									</div>
+									<div class="f-fr">
+										<img src="imgs/zhifubao.png" />
+									</div>
+								</div>
+							</div>
+							<div class="sublist zhanghuzhifu">
+								<div class="qidai"></div>
+								<p>敬请期待……</p>
+							</div>
+							<div class="sublist baitiao">
+								<div class="qidai"></div>
+								<p>敬请期待……</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="bank-list wrap">
+				<h1><i class="icon icon-bank"></i> 合作机构</h1>
+				<ul>
+					<li><img src="imgs/index_bank.png" /></li>
+				</ul>
+			</div>
+			<div class="copy f-oh">
+				<div>本支付由合利宝支付提供，合利宝支付版权所有&copy; ICP认证：粤ICP备13053149号</div>
+				<div style="margin-bottom: 20px;"><img src="imgs/4jpg.png" alt="" /></div>
+			</div>
+
+		</footer>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/layer.js"></script>
+	<script src="js/form.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/common.js"></script>
+	<script src="js/layer-my.js"></script>
+	
+	<script type="text/javascript">
+		var cardType = dataConfig.cardType,
+			bank_flag = false,
+			date_flag = false,
+			cvn_flag = false,
+			iphone_flag = false,
+			card_flag = false,
+			name_flag = false,
+			tongyi_flag = false;
+		var cardNo = $('#bank-id').val(),
+			cardNo_info = $('#bank-id').next();
+		//有效日期
+		var month = $('#card-date-month'),
+			year = $('#card-date-year'),
+			date_info = $('#cardDate_info'),
+			date_flag_y=false,date_flag_m=false;
+			month.on('change select click',function(){
+				var v = this.value;
+				if(v=='选择'||v.length==0){
+					date_info.text('请选择月份');
+					date_flag_m = false;
+				}
+				date_flag_m = true;
+				if(date_flag_m&&date_flag_y){
+					date_flag=true;
+				}
+			})
+			year.on('change select click',function(){
+				var v = this.value;
+				if(v=='选择'||v.length==0){
+					date_info.text('请选择年份');
+					date_flag_y = false;
+				}
+				date_flag_y = true;
+				if(date_flag_m&&date_flag_y){
+					date_flag=true;
+				}
+			})
+			
+		//		if($('#card-date')){
+		//			$('#card-date').on('input',function(){
+		//				var v = this.value;
+		//				v = v.replace(/[^0-9]$/g,'');
+		//				this.value = v;
+		//			})
+		//			$('#card-date').on('blur', function() {
+		//				var v = this.value;
+		//				var info = $(this).next();
+		//				info.text('');
+		//				if(v==null || v.length==0){
+		//					info.text('有效期不能为空');
+		//					 date_flag = false;
+		//				}
+		//				v = v.replace(/[^0-9]/ig,'');
+		//				if(/\d{3}/.test(v)){
+		//					v = v.replace(/(.{2})/g, "$1/");
+		//					v = v.substring(0,v.length - 1);
+		//					this.value = v;
+		//				}
+		//				date_flag = true;
+		//			})
+		//		}
+		
+		//cvn
+		if($('#card-cvn')) {
+			$('#card-cvn').on('input', function() {
+				var v = this.value;
+				v = v.replace(/[^0-9]$/g, '');
+				this.value = v;
+			})
+			$('#card-cvn').on('blur', function() {
+				var v = this.value;
+				var info = $(this).next();
+				info.innerText = '';
+				var obj = checkCvn(v);
+				cvn_flag = obj.flag;
+				info.text(obj.txt);
+			})
+
+		}
+		//银行卡
+		var cardNO_obj = luhmCheck(cardNo);
+		bank_flag = cardNO_obj.flag;
+		cardNo_info.text(cardNO_obj.txt);
+		$('#bank-id').on('input', function() {
+			var v = $(this).val();
+			v = v.replace(/[^0-9]$/g, '');
+			var obj = luhmCheck(v);
+			bank_flag = obj.flag;
+			cardNo_info.text(obj.txt);
+		})
+		//姓名
+		$('#user').on('blur', function() {
+			var v = $(this).val();
+			var info = $(this).next();
+			info.innerText = '';
+			if(v == null || v.length == 0) {
+				info.text('姓名不能为空');
+				name_flag = false;
+			}
+			name_flag = true;
+		})
+
+		//手机号
+		$('#tel').on('input blur', function() {
+			var v = $(this).val();
+			v = v.replace(/[^0-9]$/g, '');
+			this.value = v;
+			var info = $(this).next();
+			var obj = checkPhone(v);
+			iphone_flag = obj.flag;
+			info.text(obj.txt);
+		})
+		//身份证号
+		$('#card-id').on('blur', function() {
+			var v = $(this).val();
+			var info = $(this).next();
+			var obj = checkCard(v)
+			card_flag = obj.flag;
+			info.text(obj.txt);
+		})
+		//是否勾选同意
+		$('#selmsg').click(function() {
+			if($(this).hasClass('on_check')) {
+				$(this).removeClass('on_check');
+				$('.tip', this).text('请勾选同意协议');
+				tongyi_flag = false;
+			} else {
+				$(this).addClass('on_check');
+				$('.tip', this).text('');
+				tongyi_flag = true;
+			}
+		})
+		//点击同意协议并支付
+		$('#payment').bind('click', function() {
+			btnClick = function() {
+					var res = '<ul class="layer"><li class="layerTitle">已经向您的手机号<span>135****5686</span>发送一条验证码，查收后填写</li><li class="bankMsg"><lable id="bankMsg">验证码</lable><div><input type="text" placeholder="请输入验证码" required="required"/><button ><span class="timer yanzhang-timer">60s</span>后重新获取</button></div></li><li class="tip" ><i class="icon icon-error"></i>验证码有误，请重新输入</li><li style="text-align: center;"><button id="ok" class="ok">确认支付</button></li></ul>'
+					var tipData = {
+						'title': '请输入短信验证码',
+						'imgUrl': 'icon_code.png',
+						'content': res,
+						'time': false, //关闭时间
+					};
+					//获取验证码
+					layerOpen(tipData);
+						//确认支付
+					$('#ok').click(function(){
+						window.location.href="quick_seccess.html";
+					})
+					
+				 timer({
+							time:60,
+							content:'s',
+							dom:'.yanzhang-timer',
+							fn:function(){
+								var _this = this;
+								$(this.dom).parent().click(function(){
+									timer(_this);
+								})
+							}
+					})
+			}
+			switch(cardType) {
+				case 0: //存蓄卡
+					if(name_flag && card_flag && iphone_flag) {
+						btnClick();
+					};
+					break;
+				case 1: //信用卡
+					if(name_flag && card_flag && date_flag && cvn_flag && iphone_flag && tongyi_flag) {
+						btnClick();
+					}
+					break;
+			}
+		})
+	</script>
+
+</html>

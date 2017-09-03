@@ -1,0 +1,71 @@
+/**
+ * home.scss
+ * @authors Ou Yuan (beyondouyuan.github.io)
+ * @date    2017-01-06 14:49:40
+ * @version $1.0$
+ */
+body::-webkit-scrollbar {
+  display: none; }
+
+body::-moz-scrollbar {
+  display: none; }
+
+body::-ms-scrollbar {
+  display: none; }
+
+body::-o-scrollbar {
+  display: none; }
+
+.sublist .card-select h1 {
+  width: 93%; }
+
+.card-select h1 span {
+  font-size: 14px;
+  color: #969696; }
+
+.two h1 {
+  background-image: url(../imgs/title_line_yellow.png) !important; }
+
+.sublist .card-select .tabcon {
+  border: none; }
+
+.one {
+  margin-top: 32px; }
+
+#pay-btn {
+  color: #fff;
+  background: #FF514E;
+  text-align: center;
+  height: 42px;
+  font-size: 18px;
+  width: 150px;
+  border: none;
+  cursor: pointer; }
+
+.btn {
+  padding-left: 1.6%;
+  margin: 20px 0 64px 0;
+  cursor: pointer; }
+
+.select-detail {
+  width: 90%;
+  height: 34px;
+  padding-top: 20px;
+  margin: 1.6%;
+  color: #565656;
+  background: url(../imgs/selected_box.png) no-repeat left top/100% 100%; }
+  .select-detail img {
+  	    margin-top: -7px;
+        height: 22px;
+    width: auto;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;}
+  .select-detail span {
+    border: 1px solid #d6d6d6;
+    border-radius: 0px;
+    border-width: 0;
+    border-left-width: 1px;
+    border-right-width: 0px;
+    color: #fe9947;
+    margin-left: 10px; padding-right: 10px;}

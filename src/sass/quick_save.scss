@@ -1,0 +1,121 @@
+.nav .tabcon .quick_payment dd:last-child{
+    margin-top: 8px;
+}
+//.form {
+//  margin-top: 8px;
+//}
+
+.bform {
+    font-size: 16px;
+    color: #333;
+    padding-bottom: 66px;
+    p {
+        margin-top: 18px;
+    }
+    .sele {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url(../imgs/icon_nomal.png) no-repeat center center;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .on_check {
+        .sele{
+            background-image: url(../imgs/icon_selected.png);
+        }
+    }
+    #selmsg {
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 14px;
+        span {
+            color: #565656;
+        }
+        a {
+            color: #85a6d8;
+        }
+    }
+    #bank-name {
+        margin-top: 18px;
+        div {
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid #969696;
+            width: 354px;
+            padding-left: 12px;
+            img {
+                height: 28px;
+                width: auto;
+            }
+            span {
+                float: right;
+                i {
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+    label {
+        display: inline-block;
+        text-align: right;
+        width: 64px;
+        margin-right: 18px;
+    }
+    input {
+        border: 1px solid #969696;
+        text-indent: 12px;
+        height: 40px;
+        background: #fff;
+    }
+    input:-ms-input-placeholder {
+        color: #969696;
+    }
+    input::placeholder {
+        color: #969696;
+    }
+    .submit {
+        color: #fff;
+        width: 234px;
+        height: 42px;
+        line-height: 42px;
+        font-size: 18px;
+        margin-top: 36px;
+        background: #FF514E;
+        border:none;
+        cursor: pointer;
+    }
+}
+.quick_payment>dl{
+    position: relative;
+}
+.b-del{
+    position: absolute;
+    top:0;
+    right: 7%;
+    .b-del-top{
+        height: 230px;
+    }
+    .b-del-item{
+        width:259px;
+         padding-left: 50px;
+        height: 225px;
+        background: url(../imgs/bankcard_bg.png) no-repeat top left/cover;
+        margin-top: 10px;
+            overflow: hidden;
+            h1{
+                margin-top: 46px;
+                span{
+                    font-size: 12px;
+                    color: #565656;
+                }
+            }
+      #bank-id{
+          margin-top: 30px;
+          color:#333333;
+      }
+    }
+}
+
+

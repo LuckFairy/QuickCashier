@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/**
+ * home.scss
+ * @authors Ou Yuan (beyondouyuan.github.io)
+ * @date    2017-01-06 14:49:40
+ * @version $1.0$
+ */
+
+@mixin fontStyle($fontFamily: Microsoft YaHei, $fontSize: 14px, $letterSpacing: inherit, $color: #222){
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    letter-spacing: $letterSpacing;
+    color: $color;
+}
+
+// pre value style
+$v100: 100%;
+$v95: 95%;
+$v90: 90%;
+$v80: 80%;
+$v70: 70%;
+$v60: 60%;
+$v50: 50%;
+$v40: 40%;
+$v30: 30%;
+$v25: 25%;
+$v20: 20%;
+$v15: 15%;
+$v10: 10%;
+$v5: 5%;
+$v3: 3%;
+$v2: 2%;
+$v1: 1%;
+
+
+// @media screen style width value
+
+// for mobile media screen
+$wv-pad: 85%;
+$wv-ip6p: 95%;
+$wv-ip6: 95%;
+$wv-ip5: 95%;
+$wv-ip4: 95%;
+
+// small medium screen min-width:1281px let it eq 960px
+$wv-sm: 75%;
+// smal medium screen min-width:1367px let it eq 960px
+$wv-xm: 70.278184%;
+// medium screen min-width:1441px let it eq 960px
+$wv-md: 71.428571%;
+// big screen min-width:1681px let it eq 1200px
+$wv-lg: 62.5%;
+
+//  mobile media screen point
+
+$max-width-pad: 1024px;
+$max-width-ip6p: 414px;
+$max-width-ip6: 375px;
+$max-width-ip5: 320px;
+$max-width-ip4: 320px;
+
+//  @media screen point
+
+$min-width-lg: 1681px;
+$max-width-md: 1441px;
+$max-width-xm: 1367px;
+$max-width-sm: 1281px;
+
+// font style
+$fontSize12: 12px;
+$fontSize14: 14px;
+$fontSize16: 16px;
+$fontSize18: 18px;
+$fontSize22: 22px;
+$fontSize24: 24px;
+$fontSize32: 32px;
+$fontSize36: 36px;
+$fontSize48: 48px;
+// padding style
+// rem
+$padding1_rem: 1rem;
+$padding2_rem: 2rem;
+$padding3_rem: 3rem;
+$padding4_rem: 4rem;
+$padding5_rem: 5rem;
+$padding6_rem: 10rem;
+// px
+$padding1_px: 1px;
+$padding2_px: 2px;
+$padding3_px: 3px;
+$padding4_px: 4px;
+$padding5_px: 5px;
+$padding10_px: 10px;
+// margin
+// em
+$margin1_rem: 1rem;
+$margin2_rem: 2rem;
+$margin3_rem: 3rem;
+$margin4_rem: 4rem;
+$margin5_rem: 5rem;
+$margin6_rem: 10rem;
+// px
+$margin1_px: 1px;
+$margin2_px: 2px;
+$margin3_px: 3px;
+$margin4_px: 4px;
+$margin5_px: 5px;
+$margin10_px: 10px;
+// color style
+$color_white: rgba(255, 255, 255, 1);
+$color_black: rgba(0, 0, 0, 1);
+$color_red: rgba(255, 0, 0, 1);
+$color_blue: #56b5ff;
+$color_bd: #f2f2f2;
+$color:#565656;
+$color_dark:#969696;
+
+$border_color_blue:#5092f5;
+$border_color:#d6d6d6;
+//background style
+@mixin activeStyle($background:#ff514e,$color:#fff,$fontSize:16px){
+    background:$background;
+    color:$color;
+    font-size: $fontSize;
+    text-align: center;
+}
+
+// position style
+@mixin positionStyle($position: relative) {
+    position: $position;
+}
+
+// border style
+@mixin borderStyle($borderWidth:1px, $color: #d6d6d6, $borderRadius: 0px) {
+    border: $borderWidth solid $color;
+    border-radius: $borderRadius;
+}
+
+@mixin paddingStyle($top:1px, $right: 1px, $bottom: 1px, $left: 1px) {
+    padding: $top $right $bottom $left;
+}
+
+@mixin marginStyle($top:1px, $right: 1px, $bottom: 1px, $left: 1px) {
+    margin: $top $right $bottom $left;
+}
+
+@mixin marginCenterStyle($top_bottom: 0, $right_left: auto) {
+    margin: $top_bottom $right_left;
+}
+
+@mixin paddingCenterStyle($top_bottom: 10px, $right_left: 10px) {
+    padding: $top_bottom $right_left;
+}
+
+body::-webkit-scrollbar {display:none}
+body::-moz-scrollbar {display:none}
+body::-ms-scrollbar {display:none}
+body::-o-scrollbar {display:none}
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+		<title>帮助中心</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/pay_help.css" />
+		<link rel="stylesheet" type="text/css" href="css/pagination.css" />
+		<style type="text/css">
+			.wrap {
+				min-width: 768px;
+			}
+			
+			.help-list ul li {
+				color: #666;
+			}
+			
+			.help-list ul li:hover,
+			.help-list ul li.active {
+				cursor: pointer;
+				color: #85A6D8;
+			}
+			.M-box .active, .M-box1 .active, .M-box2 .active, .M-box3 .active, .M-box4 .active{
+				background: #59c28a;
+				border:none;
+			}
+			.M-box a:hover, .M-box1 a:hover, .M-box2 a:hover, .M-box3 a:hover, .M-box4 a:hover{
+				background: #59c28a;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<div class="top wrap">
+				<div class="f-fl top-left">
+					<a href="index.html" class="logo"><img src="imgs/logo_red.png" /></a>
+					<span>收银台</span>
+				</div>
+				<ul class="f-fr top-right">
+					<li style="display: none;">
+						<a href="#">登录</a>
+						<a href="#">注册</a>
+					</li>
+					<li>
+						账户：
+						<a href="javascrip:;">216431673454</a>
+						<!--<a href="#" style="margin-left: 2px;padding-right: 10px;">[退出]</a>-->
+					</li>
+					<li>
+						<a href="tel:4000966263" style="padding:0 10px; border:1px solid #565656;border-top: none;border-bottom: none;"><i class="icon"><img src="imgs/index_phone.png"/></i>400-096-6263</a>
+
+					</li>
+					<li>
+						<a href="#" style="padding-left: 10px;">帮助中心</a>
+					</li>
+
+				</ul>
+			</div>
+		</header>
+		<section class="wrap">
+			<div>
+				<div class="search-wrap">
+					<a href="#" class="search"></a>
+					<input type="text" placeholder="输入问题关键词" />
+					<span class="search">搜索</span>
+				</div>
+
+			</div>
+			<div class="nav-help">
+				<a href="#">支付问题 ></a>
+				<!--<a href="#">在线支付  ></a>-->
+				<a href="#"> 快捷支付</a>
+			</div>
+			<div class="nav-bar">
+				&nbsp;&nbsp;&nbsp;<span class="active">全部</span>|
+				<span>网银支付</span>|
+				<span>快捷支付</span>|
+				<span>扫码支付</span>
+			</div>
+
+			<div class="help-list">
+				<h1><img src="imgs/title_icon_q.png" alt="" />猜你感兴趣的问题</h1>
+				<ul>
+					<li> 怎样修改快捷支付银行相关信息以及手机号</li>
+					<li>什么是快捷支付？</li>
+					<li>网银支付支持的银行？</li>
+					<li>什么是快捷支付？</li>
+					<li>网银支付支持的银行？</li>
+					<li>什么是快捷支付？</li>
+					<li>网银支付支持的银行？</li>
+					<li>什么是快捷支付？</li>
+					<li>网银支付支持的银行？</li>
+					<div class="M-box" style="margin-top: 38px;">
+					
+					</div>
+				</ul>
+			</div>
+		</section>
+
+		<footer>
+			<div class="bank-list wrap">
+				<h1><i class="icon icon-bank"></i> 合作机构</h1>
+				<ul>
+					<li><img src="imgs/index_bank.png" /></li>
+				</ul>
+			</div>
+			<div class="copy f-oh">
+				<div>本支付由合利宝支付提供，合利宝支付版权所有&copy; ICP认证：粤ICP备13053149号</div>
+				<div style="margin-bottom: 20px;"><img src="imgs/4jpg.png" alt="" /></div>
+			</div>
+		</footer>
+	</body>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.pagination.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/common.js"></script>
+	<script type="text/javascript">
+		$(function() {
+
+			$('.M-box').pagination({
+				pageCount:5,//总页数
+				totalData:25,//数据总条数
+    			showData:5,//每页显示的条数
+			    coping:true,//是否开启首页和末页，值为boolean
+			    homePage:'首页',
+			    endPage:'末页',
+			    prevContent:'上页',
+			    nextContent:'下页',
+			    keepShowPN:true,//是否一直显示上一页下一页
+			     callback:function(api){
+			     	//传递给后台的参数
+			        var data = {
+			            page: api.getCurrent(),//获取当前页
+			        };
+			        //接口(乱写的接口，具体以实际接口为准)
+			        $.getJSON('http://localhost:3000/data.json',data,function(json){
+			            console.log(json);
+			        });
+			    }
+			});
+		})
+	</script>
+
+</html>

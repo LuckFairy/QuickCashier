@@ -1,0 +1,254 @@
+[
+	{
+		"bankType": "depositCards",
+		"bankList": [
+			{
+				"id": "1",
+				"encode":"ICBC",
+				"bankName": "中国工商银行",
+				"linkUrl": "#gongshang"
+			}, {
+				"id": "2",
+				"encode":"CCB",
+				"bankName": "中国建设银行",
+				"linkUrl": "#jianshe",
+				"desc": "单单减最高999元"
+			}, {
+				"id": "3",
+				"encode":"CMBCHINA",
+				"bankName": "招商银行",
+				"linkUrl": "#zhaoshang"
+			},
+			 {
+				"id": "4",
+				"encode":"BOC",
+				"bankName": "中国银行",
+				"linkUrl": "#zhongguo"
+			},
+			{
+				"id": "5",
+				"encode":"BOCO",
+				"bankName": "交通银行",
+				"linkUrl": "#jiaotong",
+				"desc": "单单减最高999元"
+			},
+			{
+				"id": "6",
+				"encode":"ABC",
+				"bankName": "中国农业银行",
+				"linkUrl": "#nongye",
+				"desc": "单单减最高999元"
+			},
+			{
+				"id": "7",
+				"encode":"CIB",
+				"bankName": "兴业银行",
+				"linkUrl": "#xingye"
+			},
+			{
+				"id": "8",
+				"encode":"HXB",
+				"bankName": "华夏银行",
+				"linkUrl": "#huaxia"
+			},
+			{
+				"id": "9",
+				"encode":"SPDB",
+				"bankName": "上海浦东发展银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "10",
+				"encode":"ECITIC",
+				"bankName": "中信实业银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "11",
+				"encode":"ECITIC",
+				"bankName": "广东发展银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "12",
+				"encode":"CMBC",
+				"bankName": "中国民生银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "13",
+				"encode":"CEB",
+				"bankName": "中国光大银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "14",
+				"encode":"PINGAN",
+				"bankName": "平安银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "15",
+				"encode":"PINGAN",
+				"bankName": "平安银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "16",
+				"encode":"PINGAN",
+				"bankName": "平安银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "17",
+				"encode":"PINGAN",
+				"bankName": "平安银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "18",
+				"encode":"PINGAN",
+				"bankName": "平安银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "19",
+				"encode":"PINGAN",
+				"bankName": "平安银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},			
+			{
+				"id": "20",
+				"encode":"PINGAN",
+				"bankName": "平安银行",
+				"linkUrl": "#shanghainongcunshangye"
+			}
+		]
+	},{
+		"bankType":"creditCard",
+		"bankList": [
+			{
+				"id": "1",
+				"encode":"ICBC",
+				"bankName": "中国工商银行",
+				"linkUrl": "#gongshang"
+			}, {
+				"id": "2",
+				"encode":"CCB",
+				"bankName": "中国建设银行",
+				"linkUrl": "#jianshe",
+				"desc": "单单减最高999元"
+			}, {
+				"id": "3",
+				"encode":"CMBCHINA",
+				"bankName": "招商银行",
+				"linkUrl": "#zhaoshang"
+			},
+			 {
+				"id": "4",
+				"encode":"BOC",
+				"bankName": "中国银行",
+				"linkUrl": "#zhongguo"
+			},
+			{
+				"id": "5",
+				"encode":"BOCO",
+				"bankName": "交通银行",
+				"linkUrl": "#jiaotong",
+				"desc": "单单减最高999元"
+			},
+			{
+				"id": "6",
+				"encode":"ABC",
+				"bankName": "中国农业银行",
+				"linkUrl": "#nongye",
+				"desc": "单单减最高999元"
+			},
+			{
+				"id": "7",
+				"encode":"CIB",
+				"bankName": "兴业银行",
+				"linkUrl": "#xingye"
+			},
+			{
+				"id": "8",
+				"encode":"HXB",
+				"bankName": "华夏银行",
+				"linkUrl": "#huaxia"
+			},
+			{
+				"id": "9",
+				"encode":"SPDB",
+				"bankName": "上海浦东发展银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "10",
+				"encode":"ECITIC",
+				"bankName": "中信实业银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "11",
+				"encode":"ECITIC",
+				"bankName": "广东发展银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "12",
+				"encode":"CMBC",
+				"bankName": "中国民生银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "13",
+				"encode":"CEB",
+				"bankName": "中国光大银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "14",
+				"encode":"PINGAN",
+				"bankName": "平安银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "15",
+				"encode":"PINGAN",
+				"bankName": "平安银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "16",
+				"encode":"PINGAN",
+				"bankName": "平安银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "17",
+				"encode":"PINGAN",
+				"bankName": "平安银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "18",
+				"encode":"PINGAN",
+				"bankName": "平安银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},
+			{
+				"id": "19",
+				"encode":"PINGAN",
+				"bankName": "平安银行",
+				"linkUrl": "#shanghainongcunshangye"
+			},			
+			{
+				"id": "20",
+				"encode":"PINGAN",
+				"bankName": "平安银行",
+				"linkUrl": "#shanghainongcunshangye"
+			}
+		]
+	
+	}
+]

@@ -1,0 +1,56 @@
+@import "global.scss";
+.sublist .card-select h1{
+    width: 93%;
+}
+.card-select h1 span{
+    font-size: 14px;
+    color:$color_dark;
+}
+ .two h1{
+        background-image: url(../imgs/title_line_yellow.png);
+    }
+.sublist .card-select .tabcon{
+    border:none;
+}
+.one{
+    margin-top:32px;
+}
+.card-select dd:last-child{
+    
+}
+#pay-btn{
+    color: #fff;
+    background: #FF514E;
+    text-align: center;
+    height: 42px;
+    font-size: 18px;
+    width: 150px;
+    border: none;
+    cursor: pointer;
+    
+}
+ .btn {
+    padding-left: 1.6%;
+    margin:20px 0 64px 0;
+    cursor: pointer;
+}
+
+.select-detail{
+    width: 90%;
+    height: 34px;
+    padding-top:20px;
+    margin:1.6%;
+    color:$color;
+    background:url(../imgs/selected_box.png) no-repeat left top/100% 100%;
+    img{
+        margin:0 50px 0 20px;
+    }
+    span{
+        @include borderStyle();
+        border-width: 0;
+        border-left-width: 1px;
+        color:#fe9947;
+        margin-left: 10px;
+        
+    }
+}
