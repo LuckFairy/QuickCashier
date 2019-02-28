@@ -1,0 +1,16 @@
+<link rel="stylesheet" type="text/css" href="css/layer.css"><ul class="layer"><li class="layerTitle">已经向您的手机号<span>135****5686</span>发送一条验证码，查收后填写</li><li class="bankMsg"><lable id="bankMsg">验证码</lable><div><input type="text" placeholder="请输入验证码" required="required"> <button><span class="timer yanzhang-timer">60s</span>后重新获取</button></div></li><li class="tip"><i class="icon icon-error"></i>验证码有误，请重新输入</li><!--<li class="tip" ><i class="icon icon-error"></i>验证码不能为空</li>--><li style="text-align: center"><button id="ok" class="ok">确认支付</button></li></ul><script type="text/javascript">//确认支付
+			$('#ok').click(function(){
+				window.location.href="quick_seccess.html";
+			})
+			
+		 timer({
+					time:60,
+					content:'s',
+					dom:'.yanzhang-timer',
+					fn:function(){
+						var _this = this;
+						$(this.dom).parent().click(function(){
+							timer(_this);
+						})
+					}
+			})</script>

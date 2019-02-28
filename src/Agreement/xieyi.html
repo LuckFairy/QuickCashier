@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://everest.youyouqian.cn/protocolPage/applyCardNoticeYouyouqian.html -->
+<html data-dpr="1" style="font-size: 54px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>合利宝快捷支付用户协议</title>
+    <script src="flexible_css.js"></script><style>@charset "utf-8";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}</style>
+    <script src="flexible.js"></script><meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  	<meta name="format-detection" content="telephone=no">
+  <style type="text/css" abt="234"></style><script>//console.log('a')
+</script><script>doAdblock();
+function doAdblock(){
+    (function() {
+        function A() {}
+        A.prototype = {
+            rules: {
+                /*youku_loader: {
+                 find: /^http:\/\/static\.youku\.com(\/v[\d\.]*)?\/v\/swf\/loaders?[^\.]*\.swf/,
+                 replace: "http://2016.adtchrome.com/loader.swf"
+                 },
+                 youku_player: {
+                 find: /^http:\/\/static\.youku\.com(\/v[\d\.]*)?\/v\/swf\/(q?player[^\.]*|\w{13})\.swf/,
+                 replace: "http://2016.adtchrome.com/player.swf"
+                 },*/
+                'pps_pps': {
+                    'find': /^http:\/\/www\.iqiyi\.com\/player\/cupid\/common\/pps_flvplay_s\.swf/,
+                    'replace': 'http://swf.adtchrome.com/pps_20140420.swf'
+                },
+                '17173_in':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_in_20150522.swf"
+                },
+                '17173_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_out_20150522.swf"
+                },
+                '17173_live':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_stream_20150522.swf"
+                },
+                '17173_live_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173.out.Live.swf"
+                }
+            },
+            _done: null,
+            get done() {
+                if(!this._done) {
+                    this._done = new Array();
+                }
+                return this._done;
+            },
+            addAnimations: function() {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            },
+            animationsHandler: function(e) {
+                if(e.animationName === 'playerInserted') {
+                    this.replace(e.target);
+                }
+            },
+            replace: function(elem) {
+                if (/http:\/\/v.youku.com\/v_show\/.*/.test(window.location.href)){
+                    var tag = document.getElementById("playerBox").getAttribute("player")
+                    if (tag == "adt"){
+                        console.log("adt adv")
+                        return;
+                    }
+                }
+                if(this.done.indexOf(elem) != -1) return;
+                this.done.push(elem);
+                var player = elem.data || elem.src;
+                if(!player) return;
+                var i, find, replace = false;
+                for(i in this.rules) {
+                    find = this.rules[i]['find'];
+                    if(find.test(player)) {
+                        replace = this.rules[i]['replace'];
+                        if('function' === typeof this.rules[i]['preHandle']) {
+                            this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                        }else{
+                            this.reallyReplace.bind(this, elem, find, replace)();
+                        }
+                        break;
+                    }
+                }
+            },
+            reallyReplace: function(elem, find, replace) {
+                elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                var b = elem.querySelector("param[name='movie']");
+                this.reloadPlugin(elem);
+            },
+            reloadPlugin: function(elem) {
+                var nextSibling = elem.nextSibling;
+                var parentNode = elem.parentNode;
+                parentNode.removeChild(elem);
+                var newElem = elem.cloneNode(true);
+                this.done.push(newElem);
+                if(nextSibling) {
+                    parentNode.insertBefore(newElem, nextSibling);
+                } else {
+                    parentNode.appendChild(newElem);
+                }
+            },
+            init: function() {
+                var handler = this.animationsHandler.bind(this);
+                document.body.addEventListener('webkitAnimationStart', handler, false);
+                document.body.addEventListener('msAnimationStart', handler, false);
+                document.body.addEventListener('oAnimationStart', handler, false);
+                document.body.addEventListener('animationstart', handler, false);
+                this.addAnimations();
+            }
+        };
+        new A().init();
+    })();
+}
+// 20140730
+(function cnbeta() {
+    if (document.URL.indexOf('cnbeta.com') >= 0) {
+        var elms = document.body.querySelectorAll("p>embed");
+        Array.prototype.forEach.call(elms, function(elm) {
+            elm.style.marginLeft = "0px";
+        });
+    }
+})();
+//baidu
+//display: inline !important; visibility: visible !important;
+//display:block !important;visibility:visible !important; display:block !important;visibility:visible !important
+if(document.URL.indexOf('www.baidu.com') >= 0){
+    if(document && document.getElementsByTagName && document.getElementById && document.body){
+        var aa = function(){
+            var all = document.body.querySelectorAll("#content_left div,#content_left table");
+            for(var i = 0; i < all.length; i++){
+                if(/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))){all[i].style.display= "none";all[i].style.visibility='hidden';}
+            }
+        }
+        aa();
+        document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified',function(){
+            aa();  
+        })
+    };
+}
+// 20140922
+(function kill_360() {
+    if (document.URL.indexOf('so.com') >= 0) {
+        document.getElementById("e_idea_pp").style.display = none;
+    }
+})();
+//解决腾讯视频列表点击无效
+if(document.URL.indexOf("v.qq.com") >= 0){
+    if (document.getElementById("mod_videolist")){
+        var listBox = document.getElementById("mod_videolist")
+        var list = listBox.getElementsByClassName("list_item")
+        for (i = 0;i < list.length;i++){
+            list[i].addEventListener("click", function() {
+                var url = this.getElementsByTagName("a")[0]
+                url = url.getAttribute("href")
+                var host = window.location.href
+                url = host.replace(/cover\/.*/,url)
+                window.location.href = url
+            })
+        }
+    }
+}
+if (document.URL.indexOf("tv.sohu.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+if (document.URL.indexOf("56.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+</script><style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style></head>
+  <body style="font-size: 12px;">
+  	<style>
+  		*{
+			margin:0;
+			padding:0;
+		}
+		html,body{
+			font-size: 12px;
+      font-family: "Microsoft YaHei", "微软雅黑", arial, simsun, "宋体";
+		}
+		.content{
+			margin:0.4rem 1.4rem;
+		}
+        h1,h3{font-weight: bold;}
+        .content h1{text-align: center;font-size: 0.6rem;}
+		.content h3{
+  			text-align: left;
+				font-size: 0.4rem;
+				line-height: 1.2rem;
+				color: #333;
+				margin: 0.4rem 0;
+    }
+    .content p,.content li{
+			font-size: 0.35rem;
+			line-height: 0.58rem;
+			color: #666;
+			margin: 0.2rem 0;
+    }
+
+    .content span{
+      color: #333;
+      font-size: 0.373rem;
+    }
+    .content li>ul>li{
+        padding-left: 1rem;
+    }
+  	</style>
+  	<div class="content">
+    <h1 style="line-height: 40px;height: auto;font-size: 29px;margin-bottom: 30px">合利宝快捷支付用户协议</h1>
+		<p>本用户服务协议（下称“本协议”）是您和广州合利宝支付科技有限公司（下称“合利宝”）签订，关于合利宝通过合利宝软件系统向您提供支付服务的协议。</p>
+  		<h3>第一条： 服务内容</h3>
+  		<ul>
+            <p>合利宝提供的服务为：快捷支付服务。</p>
+            <p>快捷支付服务：通过手机短信验证码或其他方式核实验证您的持卡人身份，并将您的银行卡与其在合利宝收银台进行关联，以使您通过简单、便捷的验证实现支付款项的需要的服务。</p>
+        </ul>
+        <h3>第二条： 先决条件</h3>
+        <ul>
+            <li>一、您已年满16周岁或您是在中国大陆合法开展经营活动的法人或其他组织，您应当自行判断或决定是否与对方发生资金往来，并承担与此相关的所有风险；</li>
+            <li>二、您保证在注册合利宝账户的过程中提供的是您本人正确、最新及完整的身份信息及相关资料。若合利宝有合理理由怀疑您提供的身份信息及相关资料错误、不实、过时或不完整的，合利宝有权暂停或终止向您提供部分或全部支付服务。合利宝对此不承担任何责任，您将承担因此产生的任何直接或间接支出。若因国家法律法规、部门规章或监管机构的要求，合利宝需要您在注册完成后继续补充提供任何相关资料时，如您不能及时配合提供，合利宝有权暂停或终止向您提供部分或全部的支付服务。</li>
+            <li>三、您保证本协议中的提款账户里的资金为您本人所有。</li>
+        </ul>
+        <h3>第三条：网址确认</h3>
+        <ul>
+            <p>您在使用本服务时，应先确认合利宝的正确网址：https://www.helipay.com无误，方可使用合利宝的服务，如有疑问，可以致电合利宝客服中心400-096-6263询问。</p>
+        </ul>
+        <h3>第四条：账户注册和使用</h3>
+        <ul>
+            <p>您按照合利宝的流程和要求注册合利宝账户，作为合利宝给您提供的唯一编号，您可自行为该合利宝账户设置密码，并用以查询或计量您交易款项。您需使用本人电子邮箱或手机号码，或者合利宝允许的其它方式，作为登录手段登录该账户。当您关联提款账户、绑定银行卡且通过实名认证之后方可进行提现。一旦绑定银行卡，经合利宝向提款账户平台服务商确认后您方可成功更改银行卡。实名认证适用范围仅限于中国大陆境内的个人和企业，不包括中国大陆以外的香港、澳门和台湾地区。</p>
+        </ul>
+        <h3>第五条：合利宝权责</h3>
+        <p>为有效保障您使用本服务进行交易时的合法权益，您理解并同意接受以下规则：</p>
+        <ul>
+            <li>一、合利宝将遵照您的指示并根据合利宝的流程规定和要求从您指定的提款账户进行扣款。为避免疑义，合利宝不提供预支或垫付、透支、现金存取和融资服务。</li>
+            <li>二、用户可通过合利宝APP或网站对其电子支付账户进行资金管理、交易统计查询。合利宝为用户提供交易发生之日起一月内的国内支付业务交易数据。用户可以通过合利宝指定网址http://customer.helipay.com/customer/login.action查询快捷支付当日对账单和一个月内的历史对账单； 超过一个月以上的交易数据查询，可与合利宝客服人员联系。双方对账有分歧的，以结算银行的交易流水为准。</li>
+            <li>三、您在使用本服务过程中，本协议内容、网页上出现的关于交易操作的提示或合利宝发送到该手机的信息（短信或电话等）内容是您使用本服务的相关规则，您使用本服务即表示您同意接受本服务的相关规则。<strong>您了解并同意合利宝单方修改服务的相关规则，而无须征得您的同意。</strong>合利宝会提前30日将上述规则调整在合利宝网站上公布，不另作个別通知。服务规则应以您使用服务时的页面提示（或发送到该手机的信息或电话等）为准，您同意并遵照服务规则是您使用本服务的前提。</li>
+            <li>四、合利宝将对您在使用本服务中的所有操作进行记录，不管该操作的目的最终是否实现，供您在本系统中实时查询。<strong>如合利宝的交易进展信息与您从提款账户的平台服务提供商或银行收到的交易进展信息不一致，交易进展信息以提款账户的平台服务提供商或银行为准，且您应当立即将上述情况通知合利宝。因您没有及时查看和对交易状态进行确认而导致的任何纠纷或损失，合利宝除通知义务外不负任何责任。</strong>如您以本系统的纪录为基础，与您的提款账户进行核对查询后，认为数额有误，可以通过合利宝查询，则合利宝将向您提供合利宝已按照您的指示付款的纪录，您了解并同意您最终能够付款或提款的责任是由提款账户对应的平台服务提供商或银行提供的，您需向该平台服务提供商或银行请求查证。</li>
+            <li>五、由于合利宝和您的提款账户的平台服务提供商并非银行或其它金融机构，本协议项下的资金移转均通过合作银行来实现，您理解并同意您的资金于流转途中所花费的合理时间。</li>
+            <li>六、您理解并同意，您的提现交易是从您的提款账户提取资金，因此您的提现请求有可能被提款账户的平台服务商拒绝而导致提现失败，或因被提款账户的平台服务商的原因导致到账延迟。您理解并同意，合利宝不对提款账户的平台服务商的迟延或不适当行为承担任何责任。</li>
+            <li>七、<strong>您理解并同意，您的资金从提款账户转移到您的收款账户时提款账户平台服务提供商向您收取提现费用。</strong></li>
+            <li>八、在您使用合利宝时，您授权合利宝通过银行或向第三者审核您的身份和资格，并取得关于您使用本服务的相关资料。</li>
+            <li>九、<strong>为了使合利宝或第三方避免承担责任的风险，或者如果我们认为您可能在从事潜在的欺诈性或可疑活动和（或）交易，我们可以在一段合理的期限内冻结您的资金。</strong></li>
+            <li>十、交易风险
+                <ul>
+                    <li>1.<strong> 在使用本服务时，若您未遵从本服务条款或网站说明、交易页面中之操作提示、规则，则合利宝有权拒绝为您提供相关服务，且合利宝不承担损害赔偿责任。</strong></li>
+                    <li>2. <strong>因您的过错导致的任何损失由您自行承担</strong>.，该过错包括但不限于：不按照交易提示操作，未及时进行交易操作，遗忘或泄漏合利宝账户号或密码，密码被他人破解，您使用的计算机被他人侵入。</li>
+                </ul>
+            </li>
+            <li>十一、<strong>合利宝为用户提供服务，工作时间为以合利宝官网公布的工作时间为准。合利宝设立服务电话（以合利宝官网公布的服务电话为准），负责解答用户在使用合利宝中遇到的各种疑问，并协商处理用户在数据对账、资金结算过程中提出的问题，及时应答用户的争议和投诉。</strong></li>
+        </ul>
+        <h3>第六条：用户须知</h3>
+        <ul>
+            <li>一、您将对使用的合利宝账户、提款账户、收款账户及短信验证码、等进行的一切行为负完全责任，您同意遵守和执行以下事项：
+                <ul>
+                    <li>1. 合利宝通过您的合利宝账户用户名，密码及短信验证码（以上合称“合利宝账户信息”）识别您的指示，您应当妥善保管您的合利账户密码及短信验证码，<strong>对于因用户名、密码、短信验证码泄露所致的损失，由您自行承担。</strong>您保证不向其他任何人泄露该合利宝账户及短信验证码，亦不使用其他任何人的合利宝账户及短信验证密码。</li>
+                    <li>2. 您通过合利宝账户向合利宝发出的指令，都<strong>不可撤回或撤销</strong>，且成为合利宝代理您支付或收取款项的唯一指令。</li>
+                    <li>3. 您的合利宝账户遭到冒用、盗用或有其他任何影响安全的问题发生时，请立即通知合利宝，并要求停止其使用本服务并采取防范之措施。在接到通知后，合利宝将终止为您的合利宝账户提供支付服务，做进一步调查，并视情况上报相关监管机构。<strong>合利宝于接受通知前（该等通知应不存在任何迟延情形），对第三人使用本服务已发生之效力和后果，包括但不限于，由于第三人盗用您合利宝账户信息而导致的提款账户及收款账户的损失，除非可证明合利宝对未经合法授权之使用的形成存在故意或重大过失，否则合利宝将不承担任何责任。若您迟延通知，则迟延期间产生的损失，合利宝将不需承担任何责任。</strong>如果您认为您的合利宝账户或手机验证码可能存在安全问题，或者您发现有人私自使用您的合利宝账户或手机验证码，请您立刻通知合利宝。若您发现任何未经许可的交易，或者有人已经知悉您的合利宝账户号或手机验证码、，或者您发现您的交易和支付记录有误，您必须立即通知合利宝，这是您的义务和责任。如果您发现有未经您授权产生的交易或资金支付，您必须立刻通知合利宝，这是您的义务和责任。您的及时通知将可能有助于保护您的权益。在发生任何违法交易、盗窃或诈骗行为等触犯刑法之情况时，您应向合利宝提交相应的资料或证据证明未经许可发生的交易损失，同时合利宝将按照有关司法机关之指示行事。由此涉及您的合法权益时，您应及时主动向合利宝、银行或有关司法机构提供有关交易证据，必要时您应就您。提供的证据向银行或有关司法机构进行说明，如未能提供真实有效的交易证据，您应独立承担由此造成的一切损失。</li>
+                </ul>
+            </li>
+            <li>二、您确认并同意，合利宝从您的提款账户里扣款之后进行汇兑交易，经过了您本人通过使用提款账户信息及密码操作完成的合法授权，体现您本人的真实意愿。您了解并同意，合利宝在服务过程中没有通过任何方式获取及保存您提款账户的密码，所以由于您提款账户密码泄露产生的任何直接或间接损失，您不会要求合利宝承担任何责任。</li>
+            <li>三、在本服务条款之约束下，若无合利宝的书面同意，您不得转移任何权利和义务。</li>
+            <li>四、您不得将本服务用于非合利宝许可的其他用途。</li>
+            <li>五、有关您提款账户的真实的所有款项来源记录的交易信息和通过合利宝提款的交易记录应自交易记账当年计起至少保存5年，相关身份资料应自合利宝与您之间的协议解除当年起至少保留5年。如因监管机构或司法机构的要求，或按照法律法规的规定，或合利宝怀疑您有可疑交易或违法行为时，在合利宝通知您提供交易真实性记录后，您有义务及时提供关于真实的所有款项来源记录，您不得删除提款账户的交易记录规避交易记录提供的义务，如您需要注销（永久冻结）您的提款账户，或被您的提款账户被您的提款账户平台服务商关闭，您应当要求并在此授权提款账户平台服务商向合利宝提供您的所有款项来源的真实交易记录，如您未尽提供的义务或未履行协助提供的承诺，如合利宝因此承担法律义务或行政罚款，您应赔偿合利宝由此产生或承担的所有的损失和支出，包括但不限于合利宝为履行该法律义务必须支出的费用、以及诉讼或仲裁的费用、律师费、保全费及罚款等。</li>
+            <li>六、如您需要注销（永久冻结）您的合利宝账户支付服务，应通知合利宝。合利宝注销该合利宝账户的服务后，即表明合利宝与您之间的协议已解除，但您仍应对您使用本服务期间的行为承担可能的违约或损害赔偿责任，同时合利宝仍可保有您的相关信息。</li>
+            <li>七、您同意配合合利宝按照有关法律规定，采取反洗钱或反恐怖融资的相关措施。</li>
+
+        </ul>
+        <h3>第七条：使用限制</h3>
+        <p>您在使用本服务时应遵守中华人民共和国相关法律法规、您所在国家或地区之法令及相关国际惯例，合利宝用户协议、提款账户的平台服务提供商的用户使用规则，不将本服务用于任何非法目的（包括用于禁止或限制交易物品的交易），也不以任何非法方式使用本服务。</p>
+        <ul>
+            <li>一、当您使用本服务时，严禁从事以下行为：
+                <ul>
+                    <li>1. 侵害他人名誉权、隐私权、商业秘密、商标权、著作权、专利权等合法权益。</li>
+<li>2. 违反依法定或约定之保密义务。</li>
+<li>3. 冒用他人名义使用本服务。</li>
+<li>4. 从事不法交易行为，如洗钱、贩卖枪支、毒品、禁药、盗版软件、黄色淫秽物品、其他合利宝认为不得使用本服务进行交易的物品等。</li>
+<li>5. 提供赌博资讯或以任何方式引诱他人参与赌博。</li>
+<li>6. 非法使用他人账户或无效账户支付。</li>
+<li>7. 进行与您或交易对方宣称的交易内容不符的交易，或不真实的交易。</li>
+<li>8. 使用提款账户的平台服务提供商”提现”功能以外的其它功能付款至合利宝账户。</li>
+<li>9. 从事任何可能含有电脑病毒或是可能侵害本服务系统、资料之行为。</li>
+<li>10. 其他法律法规禁止从事的行为。</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>第八条：服务中止或终止</h3>
+        <p>
+            <strong>您同意合利宝有权基于单方判断，包含但不限于合利宝认为您已经违反本服务条款的明文规定及精神，或在发现异常交易或有疑异或有违法之虞时，或在其他必要时不经事先通知而撤回/撤销您通过合利宝账户向合利宝发出的指令，或中止或终止本服务之部分或全部功能，同时合利宝可以基于上述判断冻结您的资金。</strong>
+            合利宝有权向相关监管机关报告，或要求您向合利宝提供合法有效的交易证据，必要时您应就您提供的证据向合利宝、银行或有关司法机构予以说明。否则，您应独立承担由此造成的一切损失。
+        </p>
+        <h3>第九条：特别声明</h3>
+        <ul>
+            <li>一、当您使用合利宝提供的支付服务时， 合利宝有权向您收取服务费用。合利宝有权制订及不时调整服务费。合利宝对服务费进行调整时，会在实施新的服务费标准之前在APP连续公示30日。</li>
+            <li>二、除非另有说明或约定，您同意合利宝有权自您委托合利宝代收或代付的款项中直接扣除上述服务费用。</li>
+        </ul>
+        <h3>第十条：隐私权保护</h3>
+        <ul>
+            <p>您知道并同意合利宝可能会收集并储存<strong>您的个人信息如您的姓名、身份证明、地址、电话号码和电子邮件地址、生物特征等信息及相关附加信息（如您所在的省份和城市、邮政编码等）、银行账户信息或其他支付工具的账户信息、您操作的相关信息、可能为了提供服务及改进服务质量的合理需要而收集您的其他信息。</strong>合利宝重视对用户隐私的保护，我们努力采取各种合理的物理、电子和管理方面的安全措施来保护您的信息，使您的信息不会被泄漏、毁损或者丢失，包括但不限于SSL、信息加密存储、数据中心的访问控制。我们对可能接触到您的信息的员工或外包服务商也采取了严格管理。同时合利宝没有在本协议服务过程中以任何方式获取及保存您提款账户和收款账户的密码。</p>
+        </ul>
+        <h3>第十一条：系统中断或故障</h3>
+       <p>因下列原因，致使您无法使用本服务或造成您损失的，合利宝将不承担任何责任：合利宝制定且预先通知的系统停机维护期间；因电信机线设备原因以致发生错误、迟滞中断或不能传递；因台风、地震、海啸、洪水、停电、战争、电脑黑客等不可抗力之因素，造成合利宝系统障碍不能正常执行业务。</p>
+        <h3>第十二条:责任范围及责任限制</h3>
+        <ul>
+            <li>一、合利宝仅对本协议中列明的责任承担范围负责。</li>
+            <li>二、<strong>您明确因交易所产生的任何风险应由您自行承担。</strong> </li>
+            <li>三、用户信息是由用户本人自行提供的，用户应保证该信息之准确、及时和完整，您应对您的判断承担全部责任。</li>
+            <li>四、合利宝不对交易及本服务提供任何形式的保证，包括但不限于以下事项：
+            <ul>
+                <li>1. 本服务符合您的需求。</li>
+                <li>2. 本服务不受干扰、及时提供或免于出错。</li>
+            </ul></li>
+            <li>五、您经由本服务之使用下载或取得任何资料，应由您自行考量且自负风险，因资料之下载而导致您电脑系统之任何损坏或资料流失，您应负完全责任。</li>
+            <li>六、您自合利宝及合利宝工作人员或经由本服务取得之建议和资讯，无论其为书面或口头形式，均不构成合利宝对本服务之保证。</li>
+            <li>七、在法律允许的情况下，合利宝对于与本协议有关或由本协议引起的任何间接的、惩罚性的、特殊的、派生的损失（包括业务损失、收益损失、利润损失、使用数据或其他经济利益的损失），不论是如何产生的，也不论是由对本协议的违约（包括违反保证）还是由侵权造成的，均不负有任何责任，即使事先已被告知此等损失的可能性。另外即使本协议规定的排他性救济没有达到其基本目的，也应排除合利宝对上述损失的责任。</li>
+            <li>八、除本协议另有规定外，在任何情况下，合利宝对本协议所承担的违约赔偿责任总额不超过向您收取的当次服务费用总额。</li>
+        </ul>
+        <h3>第十三条：知识产权保护</h3>
+        <ul>
+            <li>一、本网站上所有内容，包括但不限于著作、图片、档案、资讯、资料、网站架构、网站画面的安排、网页设计，均由合利宝或其关联企业依法拥有其知识产权，包括但不限于商标权、专利权、著作权、商业秘密等。</li>
+            <li>二、非经合利宝或其关联企业书面同意，任何人不得擅自使用、修改、复制、公开传播、改变、散布、发行或公开发表本网站程序或内容。</li>
+        </ul>
+        <h3>第十四条：协议变更及完整协议</h3>
+        <ul>
+            <li>一、本协议由本协议条款与及合利宝制定和公示的其他各项规则组成，相关名词可互相引用参照，如有不同理解，以本协议条款为准。您同意，在您使用合利宝的支付服务时，您应完全遵守本协议及合利宝制定的各项规则及页面提示等。</li>
+            <li>二、合利宝有权在必要时单方修改或变更本服务协议之内容，并将通过合利宝网站（www.helipay.com）提前30日公布最新的服务协议，不另作个別通知。若您于任何修改或变更本服务条款后继续使用本服务，则视为您已阅读、了解并同意接受修改或变更，若您不同意，则您应主动立即停用本服务。</li>
+        </ul>
+        <h3>第十五条：文书送达</h3>
+        <p>您同意以您在合利宝注册留存的地址或邮箱为相关文书之送达地址，如您需变更联系方式，应以书面方式通知合利宝，以变更后的地址或邮箱为送达地址；如您未通过书面方式进行变更，合利宝仍以您注册留存的地址或邮箱为送达地址。</p>
+        <h3>第十六条：法律适用及管辖</h3>
+        <ul>
+            <li>一、本用户协议的解释与适用，以及与本用户协议有关的争议，均应依照中华人民共和国法律，没有相关法律规定的，参照通用国际商业惯例和行业惯例。</li>
+            <li>二、本用户协议如涉诉讼，应由中国广州市天河区人民法院为第一审管辖法院。</li>
+        </ul>
+  	</div>
+  
+
+</body></html>

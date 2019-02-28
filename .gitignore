@@ -4,4 +4,5 @@ doc
 lib
 node_modules
 html
-.rar
+*.rar
+*.zip

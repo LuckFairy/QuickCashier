@@ -11,7 +11,7 @@ function getHeader() {
 	var pkg = require('./package.json');
     var template = ['/**',
         ' * 快捷支付项目',
-        ' * @authors  liailian',
+        ' * @authors  luckfairy',
         ' * @version v.1',
         ' * @link 18306679493@163.com',
         ' * @license mst',
